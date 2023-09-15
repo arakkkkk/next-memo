@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  ui:
+    container_name: ui
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - 3031:3000
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    restart: always
+    networks:
+      - cros
+
+networks:
+  cros:
+    name: cros_network
