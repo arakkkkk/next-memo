@@ -12,6 +12,7 @@ axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 function Memo() {
   const [loading, setLoading] = useState(true);
   const [memos, setMemos] = useState([]);
+  const [completions, setCompletions] = useState([]);
 
   useEffect(() => {
     axios.get("/api/v1/todo/list").then((results) => {
@@ -19,11 +20,20 @@ function Memo() {
       setMemos(data);
       setLoading(false);
     });
+    axios.get("/api/v1/todo/list").then((results) => {
+      const data = results.data;
+      let _completions = [];
+      for (let i = 0; i < data.length; i++) {
+        _completions.push({ label: data[i].Title, key: i });
+      }
+      setCompletions(_completions);
+    });
+    setCompletions(["command"]);
   }, []);
 
   return (
     <>
-      <Header />
+      <Header completions={completions} />
       {loading ? (
         <p className="loader">ロード中。。。</p>
       ) : (

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Card = ({ memo }) => {
   return (
     <ul>
@@ -17,10 +15,10 @@ const Card = ({ memo }) => {
                   {memo.Title}
                 </p>
                 <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                  <span class="bg-red-400 text-white text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                  <span className="bg-red-400 text-white text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
                     GitLab
                   </span>
-                  <span class="bg-sky-300 text-white text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
+                  <span className="bg-sky-300 text-white text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
                     Slack
                   </span>
                 </p>
@@ -61,8 +59,23 @@ const Card = ({ memo }) => {
               </li>
             </ul>
           </li>
-          <li className="rounded-md bg-gray-200 mt-3 px-4 py-1 text-md">
+          <li className="rounded-md bg-gray-200 mt-3 px-4 py-1 text-md h-72">
             {memo.Title}
+            <br />
+            {memo.Title}
+            <br />
+            {memo.Title}
+            <br />
+            {memo.Title}
+            <br />
+            {memo.Title}
+            <br />
+            {memo.Title}
+            <br />
+            {memo.Title}
+            <br />
+            {memo.Title}
+            <br />
           </li>
         </ul>
       </li>
