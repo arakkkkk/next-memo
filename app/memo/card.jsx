@@ -12,7 +12,7 @@ const Card = ({ memo }) => {
               />
               <div className="min-w-0 flex-auto">
                 <p className="text-lg font-semibold leading-6 text-gray-900">
-                  {memo.Title}
+                  {memo.Description}
                 </p>
                 <p className="mt-1 truncate text-xs leading-5 text-gray-500">
                   <span className="bg-red-400 text-white text-xs font-medium mr-2 px-2.5 py-0.5 rounded">
@@ -60,21 +60,21 @@ const Card = ({ memo }) => {
             </ul>
           </li>
           <li className="rounded-md bg-gray-200 mt-3 px-4 py-1 text-md h-72">
-            {memo.Title}
+            {memo.Description}
             <br />
-            {memo.Title}
+            {memo.Description}
             <br />
-            {memo.Title}
+            {memo.Description}
             <br />
-            {memo.Title}
+            {memo.Description}
             <br />
-            {memo.Title}
+            {memo.Description}
             <br />
-            {memo.Title}
+            {memo.Description}
             <br />
-            {memo.Title}
+            {memo.Description}
             <br />
-            {memo.Title}
+            {memo.Description}
             <br />
           </li>
         </ul>

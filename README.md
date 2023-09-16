@@ -1,6 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-https://github.com/go-chi/cors
+## References
+- [CORS](https://github.com/go-chi/cors)
+- [Layout: tailwind](https://tailwindui.com/)
+- [Icon: heroicons](https://heroicons.com/)
 
 ## Getting Started
 

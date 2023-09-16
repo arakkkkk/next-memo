@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/api/:slug*",
-        destination: "http://todo_go-rest:8080/api/:slug*",
+        destination: "http://memo-rest:8080/api/:slug*",
       },
     ];
   },
