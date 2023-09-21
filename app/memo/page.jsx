@@ -11,19 +11,34 @@ const Memo = () => {
   const [completions, setCompletions] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/v1/memo").then((results) => {
-      const data = results.data;
-      setMemos(data);
-      setLoading(false);
-    });
-    axios.get("/api/v1/memo").then((results) => {
-      const data = results.data;
-      let _completions = [];
-      for (let i = 0; i < data.length; i++) {
-        _completions.push({ label: "test", key: i });
-      }
-      setCompletions(_completions);
-    });
+    axios
+      .get("/api/v1/memo")
+      .then((results) => {
+        const data = results.data;
+        setMemos(data);
+        setLoading(false);
+      })
+      .catch((e) => {
+        if (e.response.status) {
+          window.location.href = "/user/login";
+        }
+      });
+    axios
+      .get("/api/v1/memo")
+      .then((results) => {
+        const data = results.data;
+        let _completions = [];
+        for (let i = 0; i < data.length; i++) {
+          _completions.push({ label: "test", key: i });
+        }
+        setCompletions(_completions);
+      })
+      .catch((e) => {
+        if (e.response.status) {
+          window.location.href = "/user/login";
+        }
+      });
+
     setCompletions(["command"]);
   }, []);
 
